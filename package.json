@@ -1,0 +1,21 @@
+{
+	"name": "iso-6346",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+    "test": "jest --verbose",
+		"start": "ts-node ./src/index.ts",
+		"watch": "npx nodemon ./src/index.ts"
+	},
+	"author": "Kamau Washington",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^29.0.0",
+		"@types/node": "^18.7.16",
+		"jest": "^29.0.3",
+		"nodemon": "^2.0.19",
+		"ts-jest": "^29.0.0",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.8.2"
+	}
+}
