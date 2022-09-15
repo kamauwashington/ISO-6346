@@ -23,7 +23,7 @@ export const isISO6346Compliant = function (containerNumber: string, getCharValu
         const contNumChar: string = containerNumber[i];
         /*
          * the first 4 characters are alphabetical, they need to be converted with
-         * nultiples of 11 ommited
+         * multiples of 11 omitted
          */
         extractedValue = (i < 4)? getCharValue(contNumChar) : Number(contNumChar);
         // multiply the extracted value by exponent to base 2 using the position of the char
