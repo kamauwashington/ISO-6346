@@ -1,5 +1,5 @@
 export const isISO6346Compliant = function (containerNumber: string, getCharValue: (c: string) => number): boolean {
-	// fail fast if any parameter is nu;l or undefined
+	// fail fast if any parameter is null or undefined
     if (!containerNumber || /^\s+$/.test(containerNumber) || !getCharValue) return false;
     
 	// validate for ISO 6346 compliant container number
@@ -43,7 +43,6 @@ export const isISO6346Compliant = function (containerNumber: string, getCharValu
     return calcSumExpB2 - stepCalc === checkDigit;
 }
 
-//console.log(isISO6346Compliant('CSQU3054383',getOwnerCodeChaValueByAsciiCharCode));
 
 
 
