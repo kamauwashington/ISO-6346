@@ -1,4 +1,4 @@
-export const isISO6346Compliant = function (containerNumber: string, getCharValue: (c: string) => number): boolean {
+export const isISO6346Compliant = function (containerNumber: string | null | undefined, getCharValue: ((c: string) => number) | null | undefined): boolean {
 	// fail fast if any parameter is null or undefined
     if (!containerNumber || /^\s+$/.test(containerNumber) || !getCharValue) return false;
     

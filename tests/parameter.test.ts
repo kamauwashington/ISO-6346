@@ -5,26 +5,28 @@ describe("ISO 6346 Parameter Tests", () => {
    
     test("null or undefined container number should return false", () => {
         expect(
-            isISO6346Compliant.call(
+            isISO6346Compliant(
                 null,
                 getOwnerCodeCharValueByDictionary)
         ).toBeFalsy();
         expect(
-            isISO6346Compliant.call(undefined, getOwnerCodeCharValueByDictionary)
+            isISO6346Compliant(
+                undefined, 
+                getOwnerCodeCharValueByDictionary)
         ).toBeFalsy();
         
     });
 
     test('empty container number should return false', () => {
         expect(
-            isISO6346Compliant.call(
+            isISO6346Compliant(
                 "",
                 getOwnerCodeCharValueByDictionary
             )
         ).toBeFalsy();
         
         expect(
-            isISO6346Compliant.call(
+            isISO6346Compliant(
                 '        ',
                 getOwnerCodeCharValueByDictionary
             )
@@ -35,13 +37,13 @@ describe("ISO 6346 Parameter Tests", () => {
 
     test('null or undefined mapping function should return false', () => {
 			expect(
-				isISO6346Compliant.call(
+				isISO6346Compliant(
 					'77777777',
 					null
 				)
             ).toBeFalsy();
             expect(
-                isISO6346Compliant.call(
+                isISO6346Compliant(
                     '77777777',
                     undefined
                 )

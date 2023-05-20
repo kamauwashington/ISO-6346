@@ -6,18 +6,18 @@ import { isISO6346Compliant } from '../src/isISO6346Compliant.function';
 describe('ISO 6346 Compliance', () => {
 	test('valid container number should be true', () => {
 		expect(
-			isISO6346Compliant.call('CSQU3054383', getOwnerCodeCharValueByDictionary)
+			isISO6346Compliant('CSQU3054383', getOwnerCodeCharValueByDictionary)
         ).toBeTruthy;
         
         expect(
-            isISO6346Compliant.call(
+            isISO6346Compliant(
                 'CSQU3054383',
                 getOwnerCodeCharValueByAsciiCharCode
             )
         ).toBeTruthy;
 
         expect(
-            isISO6346Compliant.call(
+            isISO6346Compliant(
                 'CSQU3054383',
                 getOwnCodeCharValueByPosition
             )
@@ -26,21 +26,21 @@ describe('ISO 6346 Compliance', () => {
     
     test('check digit must match when container number is in valid format', () => {
         expect(
-            isISO6346Compliant.call(
+            isISO6346Compliant(
                 'CSQZ3054383',
                 getOwnerCodeCharValueByDictionary
             )
         ).toBeFalsy;
 
         expect(
-            isISO6346Compliant.call(
+            isISO6346Compliant(
                 'CSQZ3054383',
                 getOwnerCodeCharValueByAsciiCharCode
             )
         ).toBeFalsy;
 
         expect(
-            isISO6346Compliant.call(
+            isISO6346Compliant(
                 'CSQZ3054383',
                 getOwnCodeCharValueByPosition
             )
